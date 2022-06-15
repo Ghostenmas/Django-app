@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{name}}</title>
+    <link href="/static/plugins/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    {% load my_tags %} 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          </ul>
+        </header>
+    </div>
+    <p>{{name}}</p>
+    <p>{{views_list}}</p>
+    <p>{{views_list.0}}</p>
+    <p>{{views_dic}}</p>
+    {% for i in emptyList %}
+      <p>i</p>
+    {% empty %}
+      <p>列表為空</p>
+    {% endfor %}
+
+    <p>自定義標籤: {% mul 11 22 33 %}</p>
+    {% my_input "username_input" "Username" %}
+    
+    <!-- {% load static %}
+    <img src="{% static 'images/Dream Engines EA Exclusive - Charging.jpg' %}"> -->
+  </body>
+</html>
